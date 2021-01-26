@@ -1,0 +1,43 @@
+.section-title {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  color: $title-text-color;
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+  }
+}
+.title {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.section-team,
+.section-customers {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+.section-advantages {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 47px;
+  }
+}
+.section-works {
+  padding-bottom: 94px;
+  padding-top: 47px;
+  @media screen and (max-width: 1200px) {
+    display: none;
+  }
+}

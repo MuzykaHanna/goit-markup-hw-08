@@ -1,0 +1,208 @@
+.page-header {
+  position: relative;
+  border-bottom: 1px solid #ececec;
+  .container {
+    @media screen and (min-width: 768px) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}
+/* навигация сайта */
+
+.menu-conteiner {
+  @media screen and (max-width: 767px) {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: $bg-color;
+    z-index: 999;
+    transform-origin: top right;
+    transform: scale(0);
+    transition: transform 400ms $transition;
+
+    &.is-open {
+      transform: scale(1);
+    }
+  }
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.site-nav {
+  @media screen and (max-width: 767px) {
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 60px;
+
+    .item {
+      margin-bottom: 40px;
+      text-align: center;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  @media screen and (min-width: 768px) {
+    display: flex;
+    margin-right: 84px;
+    padding-top: 38px;
+    .item {
+      margin-right: 50px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: 305px;
+    .item {
+      margin-right: 50px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  & .link {
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    width: max-content;
+    text-align: center;
+    color: $title-text-color;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+  }
+}
+.mail-nav {
+  @media screen and (max-width: 767px) {
+    .item {
+      margin-bottom: 16px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  @media screen and (min-width: 768px) {
+    padding-top: 21px;
+    padding-bottom: 21px;
+    .item {
+      margin-bottom: 10px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .item {
+      margin-right: 30px;
+      margin-bottom: 0;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $primary-text-color;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    text-align: center;
+    transition: color 250ms $transition;
+
+    @media screen and (min-width: 768px) {
+      justify-content: flex-start;
+    }
+  }
+}
+.main-nav {
+  @media screen and (max-width: 767px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  @media screen and (min-width: 768px) {
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+
+  .menu-button {
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+
+    .icon-menu {
+      display: none;
+    }
+    &.is-open {
+      .icon-menu {
+        display: block;
+      }
+      .icon-cross {
+        display: none;
+      }
+    }
+    &:hover,
+    &:focus {
+      fill: $accent-color;
+    }
+  }
+}
+
+.mail-svg {
+  width: 16px;
+  height: 11px;
+  margin-right: 10px;
+  fill: $primary-text-color;
+
+  transition: fill 250ms $transition;
+
+  .mail-nav .link:hover &,
+  .mail-nav .link:focus & {
+    fill: $accent-color;
+  }
+}
+.smartphone-svg {
+  width: 10px;
+  height: 15px;
+  margin-right: 10px;
+  fill: $primary-text-color;
+
+  transition: fill 250ms $transition;
+
+  .mail-nav .link:hover &,
+  .mail-nav .link:focus & {
+    fill: $accent-color;
+  }
+}

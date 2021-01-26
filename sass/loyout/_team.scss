@@ -1,0 +1,84 @@
+.team {
+  margin-bottom: -30px;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+
+  .item {
+    padding-bottom: 24px;
+    margin-bottom: 30px;
+    background: $bg-color;
+    box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 1px 3px rgba(0, 0, 0, 0.12);
+    border-radius: 0px 0px 4px 4px;
+
+    @media screen and (min-width: 768px) {
+      width: calc((100% - 60px) / 2);
+      margin: 15px;
+    }
+    @media screen and (min-width: 1200px) {
+      width: calc((100% - 120px) / 4);
+    }
+  }
+
+  .title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+    color: $title-text-color;
+  }
+
+  .text {
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+  }
+}
+.photo {
+  margin-bottom: 30px;
+}
+
+.section-team {
+  background-color: $team-bg-color;
+}
+/* стилизация соц-сетей */
+.social-networks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 32px;
+  padding-right: 32px;
+
+  .imet {
+    margin-right: 10px;
+
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
+  }
+}
+.social-networks__link {
+  @extend %social-networks;
+
+  background-color: $bg-color;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+  }
+}
+.social-networks__link-svg {
+  fill: #afb1b8;
+
+  transition: fill 250ms $transition;
+
+  .social-networks__link:hover &,
+  .social-networks__link:focus & {
+    fill: $bg-color;
+  }
+}
